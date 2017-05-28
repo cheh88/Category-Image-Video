@@ -1,0 +1,15 @@
+.cvi-img-container img {
+	max-width: 100%;
+	height: auto;
+}
+.cvi-img-comtainer__placeholder {
+	width: 150px;
+	position: relative;
+	text-align: center;
+	cursor: default;
+	border: 1px dashed #b4b9be;
+	box-sizing: border-box;
+	padding: 9px 0;
+	font-size: .9em;
+	line-height: 20px;
+}

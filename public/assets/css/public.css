@@ -1,0 +1,24 @@
+.cvi-taxonomy-description__image,
+.cvi-taxonomy-description__video {
+	margin-top: 25px;
+	text-align: center;
+}
+
+.cvi-embed-responsive {
+	position: relative;
+	display: block;
+	padding: 0 0 56%;
+}
+
+.cvi-embed-responsive-item,
+.cvi-embed-responsive iframe,
+.cvi-embed-responsive embed,
+.cvi-embed-responsive object {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+	border: 0;
+}
