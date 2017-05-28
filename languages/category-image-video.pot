@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Category Image Video\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/plugins/plugin-name\n"
-"POT-Creation-Date: 2017-05-27 22:57+0300\n"
+"POT-Creation-Date: 2017-05-28 08:22+0300\n"
 "PO-Revision-Date: 2013-05-10 10:37-0500\n"
 "Last-Translator: FULL NAME <email@example.com>\n"
 "Language-Team: \n"
@@ -19,44 +19,43 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: admin/class-category-image-video-admin.php:80
+#: admin/class-category-image-video-admin.php:78
 msgid "Category Image"
 msgstr ""
 
-#: admin/class-category-image-video-admin.php:81
+#: admin/class-category-image-video-admin.php:79
 msgid "Set category image"
 msgstr ""
 
 #: admin/class-category-image-video-admin.php:186
-#: admin/class-category-image-video-admin.php:209
 msgid "Remove"
 msgstr ""
 
-#: admin/class-category-image-video-admin.php:217
+#: admin/class-category-image-video-admin.php:195
 msgid "Please enter a valid YouTube URL."
 msgstr ""
 
-#: admin/class-category-image-video-admin.php:229
+#: admin/class-category-image-video-admin.php:208
 msgid "Please enter a valid Vimeo URL."
 msgstr ""
 
-#: admin/class-category-image-video-admin.php:242
+#: admin/class-category-image-video-admin.php:230
 msgid "This video provider not supported."
 msgstr ""
 
-#: admin/class-category-image-video-admin.php:296
+#: admin/class-category-image-video-admin.php:293
 msgid "Image"
 msgstr ""
 
-#: admin/class-category-image-video-admin.php:297
+#: admin/class-category-image-video-admin.php:294
 msgid "Uploading image from Media Library"
 msgstr ""
 
-#: admin/class-category-image-video-admin.php:301
+#: admin/class-category-image-video-admin.php:298
 msgid "Video"
 msgstr ""
 
-#: admin/class-category-image-video-admin.php:302
+#: admin/class-category-image-video-admin.php:299
 msgid "Enter a link to video from YouTube/Vimeo"
 msgstr ""
 
@@ -72,7 +71,7 @@ msgstr ""
 msgid "Remove image"
 msgstr ""
 
-#: category-image-video.php:59
+#: category-image-video.php:60
 msgid ""
 "This plugin requires WordPress version 4.4, plugin is currently NOT "
 "ACTIVE."
