@@ -52,6 +52,12 @@ if ( ! class_exists( 'CIV_Plugin' ) ) {
 			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_assets' ), 9 );
 		}
 
+		/**
+		 * Retrieve and concatenate a custom category image and description.
+		 *
+		 * @since 1.0.0
+		 * @param string $description
+		 */
 		public function add_image_to_description( $description ) {
 
 			if ( ! is_category() ) {
@@ -94,8 +100,14 @@ if ( ! class_exists( 'CIV_Plugin' ) ) {
 				return $description;
 			}
 
-			$format = '<div class="cvi-taxonomy-description__image"><img src="%s" width="%d" height="%s" alt=""></div>';
+			$classes = array( 'cvi-taxonomy-description__image' );
+			$classes = apply_filters( 'cvi_descr_image_classes', $classes );
+			$classes = array_filter( $classes );
+			$classes = array_map( 'esc_attr', $classes );
+
+			$format = '<div class="%s"><img src="%s" width="%d" height="%s" alt=""></div>';
 			$image  = sprintf( $format,
+				join( ' ', $classes ),
 				esc_url( $image_atts[0] ),
 				absint( $image_atts[1] ),
 				absint( $image_atts[2] )
@@ -104,6 +116,12 @@ if ( ! class_exists( 'CIV_Plugin' ) ) {
 			return apply_filters( 'cvi_descr_image_html', $image ) . $description;
 		}
 
+		/**
+		 * Retrieve and concatenate a custom category video and description.
+		 *
+		 * @since 1.0.0
+		 * @param string $description
+		 */
 		public function add_video_to_description( $description ) {
 
 			if ( ! is_category() ) {
@@ -140,8 +158,16 @@ if ( ! class_exists( 'CIV_Plugin' ) ) {
 				$oembed = wp_oembed_get( $video_src, apply_filters( 'cvi_descr_video_args', array() ) );
 
 				if ( false !== $oembed ) {
-					$format = '<div class="cvi-taxonomy-description__video cvi-embed-responsive">%s</div>';
-					$video  = sprintf( $format, $oembed );
+					$classes = array( 'cvi-taxonomy-description__video', 'cvi-embed-responsive', );
+					$classes = apply_filters( 'cvi_descr_video_classes', $classes );
+					$classes = array_filter( $classes );
+					$classes = array_map( 'esc_attr', $classes );
+
+					$format = '<div class="%s">%s</div>';
+					$video  = sprintf( $format,
+						join( ' ', $classes ),
+						$oembed
+					);
 
 					set_transient( $transient, $video, YEAR_IN_SECONDS );
 				}
