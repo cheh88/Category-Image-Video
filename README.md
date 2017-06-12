@@ -1,11 +1,4 @@
-=== Category Image Video ===
-Contributors: cheh
-Tags: category, image, video, custom fields
-Requires at least: 4.5
-Tested up to: 4.7.5
-Stable tag: 1.0.0
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+## Category Image Video
 
 This is a WordPress plugin that adds two additional fields to the taxonomy "Category"
 
