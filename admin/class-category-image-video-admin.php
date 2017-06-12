@@ -271,6 +271,10 @@ if ( ! class_exists( 'CIV_Plugin_Admin' ) ) {
 				} else if ( $old_value !== $new_value ) {
 					update_term_meta( $term_id, $field['name'], $new_value );
 				}
+
+				if ( 'video' === $key ) {
+					delete_transient( sanitize_key( $old_value ) );
+				}
 			}
 
 			// Clear cached vimeo thumbnail.

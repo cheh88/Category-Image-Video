@@ -133,14 +133,19 @@ if ( ! class_exists( 'CIV_Plugin' ) ) {
 				return $pre_video . $description;
 			}
 
-			$oembed = wp_oembed_get( $video_src, apply_filters( 'cvi_descr_video_args', array() ) );
+			$transient = sanitize_key( $video_src );
+			$video     = get_transient( $transient );
 
-			if ( false === $oembed ) {
-				return $description;
+			if ( false === $video ) {
+				$oembed = wp_oembed_get( $video_src, apply_filters( 'cvi_descr_video_args', array() ) );
+
+				if ( false !== $oembed ) {
+					$format = '<div class="cvi-taxonomy-description__video cvi-embed-responsive">%s</div>';
+					$video  = sprintf( $format, $oembed );
+
+					set_transient( $transient, $video, YEAR_IN_SECONDS );
+				}
 			}
-
-			$format = '<div class="cvi-taxonomy-description__video cvi-embed-responsive">%s</div>';
-			$video  = sprintf( $format, $oembed );
 
 			return apply_filters( 'cvi_descr_video_html', $video ) . $description;
 		}
