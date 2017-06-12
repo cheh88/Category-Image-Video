@@ -21,5 +21,5 @@ This is a WordPress plugin that adds two additional fields to the taxonomy "Cate
 
 ## Screenshots
 
-1. (https://github.com/cheh88/category-image-video/blob/master/screenshot-1.png)
+1. ![alt text](https://github.com/cheh88/category-image-video/blob/master/screenshot-1.png "Screenshot #1")
 2. (https://github.com/cheh88/category-image-video/blob/master/screenshot-2.png)
