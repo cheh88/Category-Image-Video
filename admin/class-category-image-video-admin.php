@@ -254,10 +254,6 @@ if ( ! class_exists( 'CIV_Plugin_Admin' ) ) {
 				return;
 			}
 
-			if ( ! current_user_can( 'edit_posts' ) ) {
-				return;
-			}
-
 			$fields = $this->get_custom_fields_name();
 
 			foreach ( $fields as $key => $field ) {
